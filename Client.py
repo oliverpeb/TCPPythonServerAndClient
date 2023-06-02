@@ -6,12 +6,18 @@ serverPort = 55772
 clientSocket = socket(AF_INET, SOCK_STREAM)
 clientSocket.connect((serverName, serverPort))
 
+# Prompt the user to enter webcam data
+webcam_id = int(input("Enter webcam ID: "))
+webcam_brand = input("Enter webcam brand: ")
+webcam_height = int(input("Enter webcam height: "))
+webcam_width = int(input("Enter webcam width: "))
+
 # Create a dictionary representing the webcam
 webcam = {
-    "id": 1,
-    "brand": "Logitech",
-    "Height": 1080,
-    "Width": 1920
+    "id": webcam_id,
+    "brand": webcam_brand,
+    "Height": webcam_height,
+    "Width": webcam_width
 }
 
 # Convert the dictionary to a JSON string
